@@ -300,7 +300,7 @@ void common_power_open(struct powerhal_info *pInfo)
     // interaction.
     pInfo->hint_interval[POWER_HINT_VSYNC] = 0;
     pInfo->hint_interval[POWER_HINT_INTERACTION] = 90000;
-    pInfo->hint_interval[POWER_HINT_SET_PROFILE] = 200000;
+//    pInfo->hint_interval[POWER_HINT_SET_PROFILE] = 200000;
     pInfo->hint_interval[POWER_HINT_LAUNCH] = 1500000;
     pInfo->hint_interval[POWER_HINT_VIDEO_DECODE] = 500000;
     pInfo->hint_interval[POWER_HINT_VIDEO_ENCODE] = 500000;
@@ -1093,11 +1093,11 @@ void common_power_hint(struct power_module *module, struct powerhal_info *pInfo,
                                                 792000,
                                                 ms2ns(1500));
         break;
-    case POWER_HINT_SET_PROFILE:
-        if (data) {
-            //app_profile_set(pInfo, (app_profile_knob*)data);
-        }
-        break;
+//    case POWER_HINT_SET_PROFILE:
+//        if (data) {
+//            //app_profile_set(pInfo, (app_profile_knob*)data);
+//        }
+//        break;
     /*case POWER_HINT_SHIELD_STREAMING:
         // set minimum 2 CPU core
         pInfo->mTimeoutPoker->requestPmQosTimed(PMQOS_CONSTRAINT_ONLINE_CPUS,
